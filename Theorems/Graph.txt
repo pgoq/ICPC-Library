@@ -1,0 +1,41 @@
+Flow:
+
+-> Edge-disjoint path: 
+    Conjunto de arestas de caminhos que levam do source ao sink sem repetir arestas entre os caminhos.
+    Max Edge-disjoint path = Max Flow, com arestas de peso 1 no grafo.
+
+-> Node-disjoint path: 
+    Conjunto de nos de caminhos que levam do source ao sink sem repetir nos entre os caminhos.
+    Max Node-disjoint path = Max Flow.
+    Criamos um grafo onde cada no u ira existir uma copia u'. O no u tera todas as arestas de chegadas e o no u' todas as de saida e adicionamos a aresta u -> u'. Todas as arestas com capacidade 1.
+
+-> Hall's Theorem:
+    Em grafos bipartidos, existe um perfect matching no lado X se para cada subconjunto Y de X,
+    |Y| <= |vizinhosY|, onde |Y| eh quantos vertices tem em Y.
+
+-> Konig's Theorem:
+    Em um grafo bipartido, Minimum Node Cover = Maximum Matching (Minimum Node Cover eh o conjunto minimo de nos onde cada aresta do grafo tem pelo menos um endpoint no conjunto).
+    O complemento, n - Maximum Matching = Maximum Independent Set (Maior conjunto de nos onde nenhum dos nos possuem arestas conectando outro).
+
+-> Node-disjoint path cover eh quando cada no so pertence a um unico caminho.
+    Minimum Node-disjoint path cover = n - Maximum Match
+    Criamos o grafo onde todo vertice u sera ligado ao source e criamos uma copia u' que sera ligada ao sink. Existira uma aresta v -> y' caso exista a aresta v -> y.
+
+-> General Path Cover eh um path cover onde um no pode pertencer a mais de um caminho.
+    Mesma coisa do Node-disjoint path cover mas existira uma aresta u -> v' caso exista caminho de u para v no grafo.
+
+-> Dilworh's Theorem:
+    Antichain = conjunto de nos de um grafo onde nao tem caminho de qualquer no para outro dentro do conjunto.
+    Em um grafo direcionado aciclico, Minimum General Path Cover = Maximum antichain
+
+
+Grafo planar:
+um grafo é planar se e somente se: 
+    não tem 5-clique
+    não tem um grafo bipartido completo (3,3)
+
+V - E + F = 1 + C
+// V == vertices
+// E == arestas
+// F = faces(ciclos)
+// C = componentes
