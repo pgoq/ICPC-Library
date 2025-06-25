@@ -1,2 +1,4 @@
 Numero de desarranjos(i != Pi): D(N) = (N−1) * (D(N−1) + D(N−2))
                        D(1) = 0, D(2) = 1
+    
+1 / (1 - x) = 1 + x + x^2 + x^3 + ...

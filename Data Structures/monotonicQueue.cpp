@@ -1,14 +1,12 @@
-// Min/Max Queue
+// Min queue
 //
 
-
-template<typename T> struct MQueue{
+template<typename T> struct MQueue{ 
   int tin, tout;
   deque<pair<T, int>> dq;
-  function<T(T, T)> F;
-  MQueue(function<T(T, T)> F) : tin(0), tout(0), F(F){}
+  MQueue() : tin(0), tout(0){}
   void push(T val){
-    while(!dq.empty() && F(dq.back().first, val) == val) dq.pop_back();
+    while(!dq.empty() && min(dq.back().first, val) == val) dq.pop_back();
     dq.push_back(pair(val, tin++));
   }
   void pop(){
