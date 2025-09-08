@@ -6,7 +6,7 @@
 // y é o inverso modular de B no modulo A
 
 tuple<ll, ll, ll> ext_gcd(ll a, ll b) {
-    if (!a) return {b, 0, 1};
-    auto [g, x, y] = ext_gcd(b%a, a);
-    return {g, y - b/a*x, x};
+    if (!a) return { b, 0, 1 };
+    auto [g, x, y] = ext_gcd(b % a, a);
+    return { g, y - b / a * x, x };
 }

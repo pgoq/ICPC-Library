@@ -31,7 +31,7 @@ struct Maxclique {
             q.push_back(R.back().i);
             vector<Vertex> T;
             for (auto v : R) {
-                if (e[R.back().i][v.i]) T.push_back({v.i});
+                if (e[R.back().i][v.i]) T.push_back({ v.i });
             }
             if (!T.empty()) {
                 if (S[lev]++ / ++pk < limit) init(T);
@@ -52,7 +52,8 @@ struct Maxclique {
                     }
                 }
                 expand(T, lev + 1);
-            } else if (q.size() > qmax.size()) {
+            }
+            else if (q.size() > qmax.size()) {
                 qmax = q;
             }
             q.pop_back(), R.pop_back();
@@ -66,6 +67,6 @@ struct Maxclique {
     }
 
     Maxclique(vector<bitset<200>> conn) : e(conn), C(e.size() + 1), S(C.size()), old(S) {
-        for (size_t i = 0; i < e.size(); ++i) V.push_back({static_cast<int>(i)});
+        for (size_t i = 0; i < e.size(); ++i) V.push_back({ static_cast<int>(i) });
     }
 };
