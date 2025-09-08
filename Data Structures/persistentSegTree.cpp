@@ -5,7 +5,7 @@ struct SegPersitente {
     struct Node {
         ll v; // comecar com valor neutro
         int l, r;
-        Node(ll v = 0, int l = 0, int r = 0) {}
+        Node(ll v = 0, int l = 0, int r = 0) : v(v), l(l), r(r) {}
     };
     vector<Node> seg;
     int n, CNT;
