@@ -1,4 +1,5 @@
 // Virtual Tree
+
 // constroi arvore comprimida apenas com os vertices presentes 
 // no array dado como parametro
 

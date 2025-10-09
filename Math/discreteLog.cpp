@@ -1,4 +1,5 @@
 // Discrete Log
+
 // retorna o menor x tal que a^x % m = b % m
 // se nao existe, retorna -1
 // O(sqrt(m) * log(sqrt(m))

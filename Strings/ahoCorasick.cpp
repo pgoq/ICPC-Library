@@ -31,7 +31,7 @@ void build() {
             else {
                 fail[to] = f;
                 superfail[to] = sf;
-                // dar merge nas infos (por ex: terminal[v] += terminal[f])
+                // dar merge nas infos (por ex: terminal[to] += terminal[f])
                 q.push(to);
             }
         }
@@ -42,7 +42,7 @@ void search(string& s) {
     int cur = 0;
     for (char c : s) {
         cur = trie[cur][val(c)];
-        // processar infos no no atual (por ex: ocorrencias += terminal[node])
+        // processar infos no no atual (por ex: ocorrencias += terminal[cur])
     }
 }
 

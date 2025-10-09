@@ -1,3 +1,4 @@
+// Boruvka
 
 ll boruvka(int n) {
   vector<int> vis(n, -1), reps;

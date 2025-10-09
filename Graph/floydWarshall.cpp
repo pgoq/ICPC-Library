@@ -1,4 +1,4 @@
-// Floud Warshall
+// Floyd Warshall
 
 int g[ms][ms];
 void init(int n) {

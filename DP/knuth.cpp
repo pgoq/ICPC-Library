@@ -1,4 +1,5 @@
 // Knuth
+
 // dp[i][j] = min{dp[i][k] + dp[k][j]} + cost[i][j]
 //              i < k < j
 // pode usar se opt[i][j-1] <= opt[i][j] <= opt[i+1][j]

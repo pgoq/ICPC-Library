@@ -1,6 +1,6 @@
 // FFT MOD
 
-// precisa pegar a função fft do arquivo fft.cpp
+// precisa pegar a funcao fft do arquivo fft.cpp
 
 template<const int MOD> vector<ll> convMod(const vector<ll>& a, const vector<ll>& b) {
     if (a.empty() || b.empty()) return {};

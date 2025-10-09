@@ -1,7 +1,6 @@
 // Dinic
 //
 
-#define ll long long
 struct Edge {
     Edge(int to, ll cap) : to(to), cap(cap) {}
     int to;
@@ -13,7 +12,7 @@ struct Dinic {
     vector<Edge> list;
     vector<int> dis, pt;
 
-    Dinic(int _n) : n(_n) { edges.resize(n); }
+    Dinic(int n) : n(n), edges(n) {}
 
     ll maxFlow(int src, int sink) {
         ll ans = 0;

@@ -1,4 +1,4 @@
-// Min queue
+// Monotonic queue
 //
 
 template<typename T> struct MQueue {
