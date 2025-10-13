@@ -29,7 +29,7 @@ ll boruvka(int n) {
         n_cmp--;
       }
     }
-    for (int x : reps) g[x].clear();
+    for (int x : reps) comp[x].clear();
     reps.clear();
     CNT++;
   }
